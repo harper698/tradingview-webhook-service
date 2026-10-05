@@ -1,0 +1,1 @@
+{"token":"REPLACE_WITH_YOUR_SCOPED_WEBHOOK_TOKEN","event_id":"ma01-{{exchange}}-{{ticker}}-{{interval}}-{{timenow}}-buy","symbol":"{{exchange}}:{{ticker}}","action":"buy","price":{{close}},"timestamp":"{{timenow}}"}

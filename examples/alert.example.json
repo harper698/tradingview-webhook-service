@@ -1,0 +1,8 @@
+{
+  "token": "REPLACE_WITH_YOUR_SCOPED_WEBHOOK_TOKEN",
+  "event_id": "demo.BTCUSDT.buy.001",
+  "symbol": "BINANCE:BTCUSDT",
+  "action": "buy",
+  "price": 60000.25,
+  "timestamp": "2026-10-04T12:00:00Z"
+}

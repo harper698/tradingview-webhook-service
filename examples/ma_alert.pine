@@ -1,0 +1,12 @@
+//@version=6
+indicator("Webhook portfolio demo: SMA crossover", overlay = true)
+fast = ta.sma(close, 10)
+slow = ta.sma(close, 30)
+buySignal = ta.crossover(fast, slow)
+sellSignal = ta.crossunder(fast, slow)
+plot(fast, "Fast SMA", color = color.teal)
+plot(slow, "Slow SMA", color = color.orange)
+// Create one alert per condition, once per bar close. Edit the message in the
+// private alert dialog; never publish a script containing your webhook token.
+alertcondition(buySignal, title = "Buy signal", message = '{"token":"REPLACE_WITH_YOUR_SCOPED_WEBHOOK_TOKEN","event_id":"ma01-{{exchange}}-{{ticker}}-{{interval}}-{{timenow}}-buy","symbol":"{{exchange}}:{{ticker}}","action":"buy","price":{{close}},"timestamp":"{{timenow}}"}')
+alertcondition(sellSignal, title = "Sell signal", message = '{"token":"REPLACE_WITH_YOUR_SCOPED_WEBHOOK_TOKEN","event_id":"ma01-{{exchange}}-{{ticker}}-{{interval}}-{{timenow}}-sell","symbol":"{{exchange}}:{{ticker}}","action":"sell","price":{{close}},"timestamp":"{{timenow}}"}')
