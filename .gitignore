@@ -16,3 +16,4 @@ data/
 output/
 .coverage
 htmlcov/
+.DS_Store

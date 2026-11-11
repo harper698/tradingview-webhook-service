@@ -1,4 +1,6 @@
 include LICENSE README.md README.zh-CN.md requirements.txt requirements-lock.txt .env.example
+include run_demo.py demo_output.png
+recursive-include demo *.py *.png
 recursive-include docs *.md
 recursive-include examples *.py *.ps1 *.json *.txt *.pine
 recursive-include tests *.py
